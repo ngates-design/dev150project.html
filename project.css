@@ -4,4 +4,32 @@ body {
     color: #333;
 }
 */
+/* 1. TYPE SELECTOR (Applies to all <p> elements) */
+p {
+    font-family: Arial, sans-serif;
+    color: #42136b;
+    line-height: 1.6;
+    /* Box Model Element #1 */
+    margin-bottom: 20px; 
+}
+
+/* 2. ID SELECTOR (Applies only to the element with id="main-title") */
+#main-title {
+    color: #1e3a8a; /* Primary Deep Blue */
+    text-align: center;
+    /* Box Model Element #2 */
+    border-bottom: 3px solid #f97316; /* Complementary Orange Border */
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+
+/* 3. CLASS SELECTOR (Applies to any element with class="profile-card") */
+.profile-card {
+    background-color: #f0f4f8; /* Light blue-gray tinted background */
+    /* Box Model Element #3 */
+    border: 2px solid #1e3a8a; /* Deep Blue Border */
+    padding: 20px;            /* Spacing inside the box */
+    margin: 30px auto;        /* Spacing outside the box (centers it) */
+    max-width: 500px;
+}
 

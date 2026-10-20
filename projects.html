@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="project.css">
     <title>Projects | Personal Portfolio</title>
+    <!-- Your linked CSS file -->
+    <link rel="stylesheet" href="project.css">
 </head>
 <body>
 
@@ -20,21 +21,26 @@
 
     <main>
         <section>
-            <h1>My Projects</h1>
-            <p>A showcase of my recent work and accomplishments.</p>
+            <!-- Moved out of head, and added the ID selector to style it like your other pages -->
+            <h1 id="main-title">My Projects</h1>
+            <p style="text-align: center;">A showcase of my recent work and accomplishments.</p>
 
-            <!-- Project Card Gallery Layout Components -->
-            <article>
-                <h3>Project Title One</h3>
-                <p>A brief summary description highlighting my hard work</p>
-                <a href="#" target="_blank" rel="noopener noreferrer">View Live Demo</a>
-            </article>
+            <!-- Applied your class selector here so your projects match your layout cards! -->
+            <div class="profile-card">
+                <article>
+                    <h3>Project Title One</h3>
+                    <p>A brief summary description highlighting my hard work</p>
+                    <a href="#" target="_blank" rel="noopener noreferrer">View Live Demo</a>
+                </article>
+            </div>
 
-            <article>
-                <h3>Project Title Two</h3>
-                <p>A brief summary description highlighting the core frameworks, engineering stack, and solutions built for this project application.</p>
-                <a href="#" target="_blank" rel="noopener noreferrer">View Source Code</a>
-            </article>
+            <div class="profile-card">
+                <article>
+                    <h3>Project Title Two</h3>
+                    <p>A brief summary description highlighting the core frameworks, engineering stack, and solutions built for this project application.</p>
+                    <a href="#" target="_blank" rel="noopener noreferrer">View Source Code</a>
+                </article>
+            </div>
         </section>
     </main>
 
