@@ -1,35 +1,60 @@
-*/
+/* 1. TYPE SELECTOR: Modifies base body elements */
 body {
-    background-color: #a55353;
-    color: #333;
-}
-*/
-/* 1. TYPE SELECTOR (Applies to all <p> elements) */
-p {
-    font-family: Arial, sans-serif;
-    color: #42136b;
-    line-height: 1.6;
-    /* Box Model Element #1 */
-    margin-bottom: 20px; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6; /* Complementary light background color */
+    color: #2c3e50;            /* Text color */
+    margin: 0;
+    padding: 20px;
 }
 
-/* 2. ID SELECTOR (Applies only to the element with id="main-title") */
+/* 2. ID SELECTOR: Customizes the specific main title across pages */
 #main-title {
-    color: #1e3a8a; /* Primary Deep Blue */
+    color: #16a085;       /* Primary Color: Teal */
     text-align: center;
-    /* Box Model Element #2 */
-    border-bottom: 3px solid #f97316; /* Complementary Orange Border */
-    padding-bottom: 10px;
-    margin-top: 20px;
+    text-transform: uppercase;
+    
+    /* BOX MODEL ELEMENT #1: Configures custom border lines and padding layout */
+    margin: 30px auto;    
+    padding-bottom: 15px; 
+    border-bottom: 3px solid #e67e22; /* Complementary Color: Warm Orange */
 }
 
-/* 3. CLASS SELECTOR (Applies to any element with class="profile-card") */
+/* 3. CLASS SELECTOR: Customizes all modular profile containers */
 .profile-card {
-    background-color: #f0f4f8; /* Light blue-gray tinted background */
-    /* Box Model Element #3 */
-    border: 2px solid #1e3a8a; /* Deep Blue Border */
-    padding: 20px;            /* Spacing inside the box */
-    margin: 30px auto;        /* Spacing outside the box (centers it) */
-    max-width: 500px;
+    background-color: #ffffff; /* White card color to lift off the background */
+    max-width: 600px;
+    
+    /* BOX MODEL ELEMENT #2: Configures outline borders, container spaces, and margins */
+    border: 2px solid #16a085; /* Teal border line */
+    border-radius: 8px;        
+    padding: 25px;             /* Space inside the card lines */
+    margin: 20px auto;         /* Space outside the card lines to layout and center it */
 }
 
+/* NAVIGATION LAYOUT STYLING */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+nav a {
+    color: #16a085;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #e67e22; /* Changes hover interactions to matching orange */
+}
+
+/* BOX MODEL ELEMENT #3: Styles the baseline layout element spacing */
+footer {
+    text-align: center;
+    color: #7f8c8d;
+    
+    margin-top: 50px;
+    padding: 20px;
+    border-top: 1px solid #bdc3c7;
+}
