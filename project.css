@@ -4,9 +4,9 @@
     --bg-card: #961667;        /* Deep Magenta/Purple Card Background */
     --primary-teal: #0c010a;   /* Very Dark Charcoal/Black */
     --accent-orange: #e67e22;  /* Complementary Warm Orange */
-    --text-on-main: #0a0505;   /* White text on the blue page background */
-    --text-light: #1b0d98;     /* White text on dark cards and navigation */
-    --text-muted: #000000;     /* Maintain readable footer text */
+    --text-on-main: #ffffff;   /* White text on the blue page background */
+    --text-light: #ffffff;     /* White text on dark cards and navigation */
+    --text-muted: #ffffff;     /* Maintain readable footer text */
     --border-light: #bdc3c7;   /* Light Gray Separators */
     
     /* Font Pairing Variables */
@@ -36,7 +36,7 @@ p {
 
 h2 {
     font-family: var(--font-heading);
-    color: var(--text-mutesd);
+    color: var(--text-light);
     font-weight: bold; 
 }
 
