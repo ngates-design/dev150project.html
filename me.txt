@@ -1,0 +1,9 @@
+Diving into this accessibility audit really shifted my perspective on how we build for the web. Honestly, it's easy to get caught up in making a UI look sleek or styling a layout until it looks right to you, but running my project through WAVE was a solid reality check. It forced me to look at my code through a completely different lens.
+
+The biggest takeaways came from resolving three main issues: a form error, a contrast problem, and an image missing alt text. Fixing the image alt text was simple enough, but it made me realize how isolating a bad layout is for someone relying on a screen reader to navigate. Tackling the low-contrast issues was another wake-up call. What looks like a clean layout on a monitor can be completely unreadable for someone with a visual impairment.
+
+The trickiest part was sorting out the form elements. Making sure everything was explicitly paired with proper descriptive attributes to keep inputs accessible took some troubleshooting. But watching those red error flags drop down to zero after tightening up the semantic HTML felt incredibly satisfying. At the end of the day, accessible code isn't just a checklist requirement or extra work; it's foundational to clean engineering. This audit proved that building a premium digital experience means making sure it actually works for everyone who hits the site.
+
+
+
+https://github.com/ngates-design/dev150project.html/tree/59c7d6cca3d27fd8db1b7875a941daf8e9182d6b
