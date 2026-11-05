@@ -1,10 +1,10 @@
 :root {
     /* Color Palette Variables */
-    --bg-main: #3861e8;        /* Vibrant Green Background */
+    --bg-main: #3861e8;        /* Vibrant Blue Background */
     --bg-card: #961667;        /* Deep Magenta/Purple Card Background */
-    --primary-teal: #ffffff;   /* High-contrast text on the blue page background */
+    --primary-teal: #0c010a;   /* Very Dark Charcoal/Black */
     --accent-orange: #e67e22;  /* Complementary Warm Orange */
-    --text-dark: #ffffff;      /* White text on the blue page background */
+    --text-on-main: #ffffff;   /* White text on the blue page background */
     --text-light: #ffffff;     /* White text on dark cards and navigation */
     --text-muted: #ffffff;     /* Maintain readable footer text */
     --border-light: #bdc3c7;   /* Light Gray Separators */
@@ -22,7 +22,7 @@
 body {
     font-family: var(--font-body);
     background-color: var(--bg-main);
-    color: var(--text-dark);
+    color: var(--text-on-main);
     margin: 0;
     padding: 16px; /* Spacing System: Multiple of 8px */
     line-height: 1.5;
@@ -30,13 +30,13 @@ body {
 
 p {
     font-family: var(--font-body); /* FIXED: Swapped out monospace to align with font pairing goals */
-    color: var(--text-dark);
+    color: var(--text-on-main);
     font-size: 16px; /* Adjusted to a normal body font size scale */
 }
 
 h2 {
     font-family: var(--font-heading);
-    color: var(--primary-teal);
+    color: var(--text-light);
     font-weight: bold; 
 }
 
@@ -54,7 +54,7 @@ img {
 /* ID SELECTOR (2/3) */
 #main-title {
     font-family: var(--font-heading);
-    color: var(--primary-teal);
+    color: var(--text-light);
     text-align: center;
     text-transform: uppercase;
     font-size: 24px;
@@ -180,8 +180,9 @@ footer {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    outline: 3px solid #ffffff;
+    outline: 3px solid #000000;
     outline-offset: 2px;
+    box-shadow: #000000 2pt;
 }
 
 /* ==========================================================================
