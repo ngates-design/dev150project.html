@@ -1,6 +1,6 @@
 :root {
     /* Color Palette Variables */
-    --bg-main: #24bc89;        /* Vibrant Green Background */
+    --bg-main: #3861e8;        /* Vibrant Green Background */
     --bg-card: #961667;        /* Deep Magenta/Purple Card Background */
     --primary-teal: #0c010a;   /* Very Dark Charcoal/Black */
     --accent-orange: #e67e22;  /* Complementary Warm Orange */
@@ -41,6 +41,9 @@ h2 {
 }
 
 img {
+    position: sticky;
+    top: 0;
+    bottom: 0;
     max-width: 100%;
     height: auto;
     display: block;
@@ -232,6 +235,6 @@ footer {
     color:#461f1f
 }
 .container div:nth-child{
-    font-size: 18px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
