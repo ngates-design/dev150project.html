@@ -22,3 +22,12 @@ been practicing so i addedin to listen for user actions
 check validity and dpdate error messeges
 update accesibility status
 and claer errors on form reset
+
+
+<!-- wcag -->
+
+took me forever to debub and understand why i wasnt passing after a little inpection i saw it was my nav bar i fixed text 
+
+<!-- aria -->
+
+also added arias for accesisibility 
