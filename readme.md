@@ -15,3 +15,10 @@ i added, pagination below my footer i was getting low contrast errors due to the
 1.PDF  attached to pagination div 
 
 2.on the greater than simple used to navigate between tabs i attached the index.html file so it would return to one if the was on two 
+
+<!-- javascript -->
+
+been practicing so i addedin to listen for user actions
+check validity and dpdate error messeges
+update accesibility status
+and claer errors on form reset
