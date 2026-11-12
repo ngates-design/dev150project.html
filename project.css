@@ -3,7 +3,7 @@
     --bg-main: #3861e8;        /* Vibrant Blue Background */
     --bg-card: #961667;        /* Deep Magenta/Purple Card Background */
     --primary-teal: #0c010a;   /* Very Dark Charcoal/Black */
-    --accent-orange: #e67e22;  /* Complementary Warm Orange */
+    --accent-orange: #ffd166;  /* High-contrast gold accent on the blue background */
     --text-on-main: #ffffff;   /* White text on the blue page background */
     --text-light: #ffffff;     /* White text on dark cards and navigation */
     --text-muted: #ffffff;     /* Maintain readable footer text */
@@ -166,12 +166,18 @@ footer {
     text-align: left;
 }
 
+.contact-form fieldset {
+    display: grid;
+    gap: 8px;
+    min-width: 0;
+}
+
 .contact-form input,
 .contact-form textarea {
     box-sizing: border-box;
     width: 100%;
     padding: 10px;
-    border: 2px solid var(--border-light);
+    border: 2px solid #4b5563;
     border-radius: 4px;
     background-color: #ffffff;
     color: #1f2937;
@@ -183,6 +189,20 @@ footer {
     outline: 3px solid #000000;
     outline-offset: 2px;
     box-shadow: #000000 2pt;
+}
+
+.contact-form button {
+    border: 2px solid #0c010a;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #0c010a;
+    color: #ffffff;
+    font: inherit;
+}
+
+.contact-form button:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
 }
 
 /* ==========================================================================
@@ -272,7 +292,9 @@ footer {
 }
 
 .pag a{
-color: black;
+    margin-right: 20px;
+color: #ffffff;
+font-size: 30px;
 text-decoration: none;
 padding: 8px,15px;
 display: inline-block;
@@ -280,11 +302,100 @@ display: inline-block;
 
 .pag a.active{
     background-color: aqua;
+    color: #000000;
     font-weight: bold;
     border-radius: 5px;
 }
 
 .pag a:hover:not(.active){
-    background-color: grey;
+    background-color: #1f2937;
+    color: #ffffff;
     border-radius: 5px;
+}
+
+.form{
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: 2px solid;
+    border-radius: 20px;
+    padding: 10px;
+    overflow: auto;
+}
+
+.form button{
+    justify-self: center;
+    width: 100px;
+}
+
+.form a {
+    justify-self: center;
+    width: 100px;
+}
+
+@media (max-width: 767px) {
+    .form {
+        padding: 12px;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-form fieldset {
+        padding: 12px;
+    }
+
+    .contact-form button {
+        width: 100%;
+        min-height: 44px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .form {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .contact-form {
+        max-width: 600px;
+    }
+
+    .contact-form fieldset {
+        padding: 16px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .form {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 24px;
+    }
+
+    .contact-form {
+        max-width: 760px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-form fieldset {
+        grid-column: 1 / -1;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+        align-items: center;
+        padding: 20px;
+    }
+
+    .contact-form fieldset legend,
+    .contact-form fieldset label[for="message"],
+    .contact-form fieldset #message {
+        grid-column: 1 / -1;
+    }
+
+    .contact-form button {
+        width: 100%;
+        min-height: 44px;
+    }
 }
