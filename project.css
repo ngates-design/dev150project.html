@@ -191,6 +191,12 @@ footer {
     box-shadow: #000000 2pt;
 }
 
+.contact-form .form-error {
+    grid-column: 1 / -1;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
 .contact-form button {
     border: 2px solid #0c010a;
     border-radius: 4px;
@@ -293,11 +299,11 @@ footer {
 
 .pag a{
     margin-right: 20px;
-color: #ffffff;
-font-size: 30px;
-text-decoration: none;
-padding: 8px,15px;
-display: inline-block;
+    color: #ffffff;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 8px,15px;
+    display: inline-block;
 }
 
 .pag a.active{
@@ -396,6 +402,10 @@ display: inline-block;
 
     .contact-form button {
         width: 100%;
-        min-height: 44px;
+        height: 100%;
     }
+}
+.contact-form button:hover:not(.active){
+    color:rgb(13, 188, 232);
+    
 }

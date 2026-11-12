@@ -22,7 +22,7 @@
         </nav>
     </header>
     
-    <h1 id="main-title">Welcome to My Page</h1>
+    <h1 id="main-title">About &amp; Contact</h1>
     
     <div class="profile-card">
         <h2>Contact Me</h2> 
@@ -34,46 +34,91 @@
         <ul>
             <li>Email: <a href="mailto:ngates@my.campus.edu">ngates@my.campus.edu</a></li>
             <li>Phone: 518-366-3628</li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/nazir-gates-/" target="_blank" rel="noopener noreferrer">Nazir Gates</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/nazir-gates-/" target="_blank" rel="noopener noreferrer">Nazir Gates on LinkedIn</a></li>
         </ul>
     </div>  
-    <section class="container">
-        <div class="item item1">1</div>
-        <div class="item item2">2</div>
-        <div class="item item3">3</div>
-        <div class="item item4">4</div>
-        <div class="item item5">5</div>
-        <div class="item item6">6</div>
-    </section>
     <footer>
         <div class="form">
         <h2>FEEL FREE TO REACH OUT</h2>
         <form class="contact-form">
             <fieldset>
                 <legend>Contact information</legend>
-                <label for="email">-EMAIL-</label>
-                <input type="email" id="email" name="email" placeholder="input-email@gmail.com" minlength="6" maxlength="35" required>
-                <label for="phone">-PHONE NUMBER-</label>
-                <input type="tel" id="phone" name="phone" placeholder="518-000-0000" minlength="10" maxlength="14" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
-                <label for="day">-DATE-</label>
-                <input type="date" id="day" name="day">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4"></textarea>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="name@example.com" minlength="6" maxlength="35" required aria-invalid="false" aria-describedby="email-error">
+                <span class="form-error" id="email-error" role="alert" hidden></span>
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone" placeholder="518-000-0000" minlength="10" maxlength="14" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" aria-invalid="false" aria-describedby="phone-error">
+                <span class="form-error" id="phone-error" role="alert" hidden></span>
+                <label for="day">Date</label>
+                <input type="date" id="day" name="day" aria-invalid="false" aria-describedby="day-error">
+                <span class="form-error" id="day-error" role="alert" hidden></span>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" aria-invalid="false" aria-describedby="message-error"></textarea>
+                <span class="form-error" id="message-error" role="alert" hidden></span>
             </fieldset>
-            <button type="submit">-Submit-</button>
-            <button type="reset">-Clear Form-</button>
+            <button type="submit">Submit</button>
+            <button type="reset">Clear Form</button>
         </form>
        </div>
         <p>&copy; 2026 NAZIR GATES. All rights reserved.</p>
     </footer>
- <div class="pag">
-
-        <a href="index.html"><</a>
-        <a href="index.html"class="active" >1</a>
-        <a href="projects.html">2</a>
-        <a href="about.html">3</a>
-        <a href="naz.pdf">wireframe</a>
-        <a href="projects.html">></a>
+    <div class="pag" role="navigation" aria-label="Page navigation">
+        <a href="index.html" aria-label="Previous page: Home">&lt;</a>
+        <a href="index.html" aria-label="Page 1: Home">1</a>
+        <a href="projects.html" aria-label="Page 2: Projects">2</a>
+        <a href="about.html" class="active" aria-label="Page 3: About and Contact" aria-current="page">3</a>
+        <a href="naz.pdf" aria-label="Open wireframe PDF">wireframe</a>
+        <a href="projects.html" aria-label="Next page: Projects">&gt;</a>
     </div>
+    <script>
+        const contactForm = document.querySelector(".contact-form");
+        const validatedFields = contactForm.querySelectorAll("input, textarea");
+
+        function updateFieldError(field) {
+            const errorMessage = document.getElementById(`${field.id}-error`);
+            let message = "";
+
+            if (field.validity.valueMissing) {
+                message = "Please enter your " + (field.id === "email" ? "email address." : "phone number.");
+            } else if (field.validity.typeMismatch) {
+                message = "Enter a valid email address.";
+            } else if (field.validity.patternMismatch) {
+                message = "Enter a phone number in this format: 518-000-0000.";
+            } else if (field.validity.tooShort) {
+                message = `Enter at least ${field.minLength} characters.`;
+            } else if (field.validity.tooLong) {
+                message = `Enter no more than ${field.maxLength} characters.`;
+            } else if (field.validity.badInput) {
+                message = "Enter a valid date.";
+            }
+
+            errorMessage.textContent = message;
+            errorMessage.hidden = !message;
+            field.setAttribute("aria-invalid", String(Boolean(message)));
+        }
+
+        validatedFields.forEach((field) => {
+            field.addEventListener("invalid", () => updateFieldError(field));
+            field.addEventListener("input", () => {
+                if (field.getAttribute("aria-invalid") === "true") {
+                    updateFieldError(field);
+                }
+            });
+            field.addEventListener("change", () => {
+                if (field.getAttribute("aria-invalid") === "true") {
+                    updateFieldError(field);
+                }
+            });
+        });
+
+        contactForm.addEventListener("reset", () => {
+            validatedFields.forEach((field) => {
+                const errorMessage = document.getElementById(`${field.id}-error`);
+                errorMessage.textContent = "";
+                errorMessage.hidden = true;
+                field.setAttribute("aria-invalid", "false");
+            });
+        });
+    </script>
 </body>
 </html>
