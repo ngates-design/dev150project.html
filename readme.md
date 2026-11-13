@@ -39,3 +39,7 @@ took me forever to debub and understand why i wasnt passing after a little inpec
 <!-- aria -->
 
 also added arias for accesisibility 
+
+<!-- wcag errors -->
+
+i was getting normal text error due to a  white or off-white background being to simalar in color hidding from user

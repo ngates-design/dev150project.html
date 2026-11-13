@@ -89,7 +89,7 @@ nav {
     justify-content: center;
     border: 2px solid var(--primary-teal);
     border-radius: 8px;
-    background-color: rgb(201, 26, 122);
+    background-color: var(--bg-card);
     padding: 8px;
 }
 
@@ -139,8 +139,8 @@ a {
     text-align: center; 
     font-family: var(--font-heading);
     font-size: 20px;
-    background-color: rgb(214, 19, 188);
-    color: #000000; 
+    background-color: #f4a8d7;
+    color: var(--primary-teal);
     box-sizing: border-box;
     min-width: 0;
     padding: 16px;
